@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirm Table Reservation</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
     <header>
         <div class="logo">Snappy</div>
-       
+        
         <img src="/snappy logo.png" alt="" class="SnappYlogo">
         
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-
                 <li><a href="#">Profile</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
@@ -25,25 +26,23 @@
     <main>
         <section class="reservation-container">
             <h2>Confirm Reservation</h2>
+          
             <div class="reservation-content">
                 <div class="left-section">
-                    <label>Name:</label> <input type="text">
-                    <label>Date & Time:</label> <input type="datetime-local">
-                    <br>
-                    <br>
-                    <br>
-                    <div class="dinein">
-                        <label for="" name="dine">Dine in</label>
-                        <input type="radio" name="dine">
+                    <label>Name:</label> <input type="text" class="input-group mb-3">
+                    <label>Date & Time:</label> <input type="datetime-local" class="form-control datetime-input datetime">
+                    <br><br><br>
+                    <div class="dinein" style="background-color: #7ae4a6; padding: 10px; border-radius: 5px;">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="radio" id="dineIn" name="dine">
+                            <label class="form-check-label" for="dineIn">Dine in</label>
+                        </div>
                     </div>
-                    
-                    
-                    <br><br>
-
-                    <label>Number of guests:</label> <input type="number">
-                    <label>Table Number:</label> <input type="text">
-                    <label>Reservation Time:</label> <input type="time">
-                    <label>Number of Guests:</label> <input type="number">
+                    <br>
+                    <label>Number of guests:</label> <input type="number" class="form-control">
+                    <label>Table Number:</label> <input type="text" class="form-control">
+                    <label>Reservation Time:</label> <input type="time" class="form-control">
+                    <label>Number of Guests:</label> <input type="number" class="form-control">
                     <h4>Real-time table availability status:</h4>
                     <div class="availability">
                         <span class="available">🟢 Available</span>
@@ -52,26 +51,40 @@
                     </div>
                 </div>
                 <div class="right-section">
-                    <label>Username:</label> <input type="text">
+                    <label>Username:</label> <input type="text" class="form-control">
                     <br><br><br><br><br><br><br>
-
-                    <div class="dineout">
-                        <label for="" name="dine">Dine Out</label>
-                    <input type="radio" name="dine">
+                 <div class="row-4"> 
+                    <div class="dineout" style="background-color: #e98f83; padding: 10px; border-radius: 5px; ">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="radio" id="dineOut" name="dine">
+                            <label class="form-check-label" for="dineOut">Dine Out</label>
+                        </div>
                     </div>
-                    
-                    <br><br>
-                    <label>Pickup time:</label> <input type="time">
+                </div>  
+                    <br>
+                    <label>Pickup time:</label> <input type="time" class="form-control">
                     <label>Options:</label>
-                    <input type="radio" name="pickup" value="Takeaway"> Takeaway
-                    <input type="radio" name="pickup" value="Delivery"> Delivery
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="radio" id="takeaway" name="pickup" value="Takeaway">
+                        <label class="form-check-label" for="takeaway">Takeaway</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="radio" id="delivery" name="pickup" value="Delivery">
+                        <label class="form-check-label" for="delivery">Delivery</label>
+                    </div>
                     <h4>Order confirmation notification:</h4>
-                    <input type="radio" name="confirm" value="Yes"> Yes
-                    <input type="radio" name="confirm" value="No"> No
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="radio" id="confirmYes" name="confirm" value="Yes">
+                        <label class="form-check-label" for="confirmYes">Yes</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="radio" id="confirmNo" name="confirm" value="No">
+                        <label class="form-check-label" for="confirmNo">No</label>
+                    </div>
                 </div>
             </div>
             <form action="">
-                <button class="confirm-btn">Confirm</button>
+                <button class="btn btn-primary">Confirm</button>
             </form>
             
         </section>
@@ -86,5 +99,7 @@
             <p>Opening Hours: 10:00 AM to 11:00 AM</p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

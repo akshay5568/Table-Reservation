@@ -93,6 +93,16 @@ footer {
     background-color: green;
 }
 
+.datetime-input {
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    padding: 12px;
+    background-color: #e9f5ff;
+    font-size: 18px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     header {
